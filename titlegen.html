@@ -3,17 +3,17 @@
 <head>
     <meta charset='utf-8' />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Create yourself a new business card with a job title every hipster would be jealous of!" />
+    <meta name="description" content="Generate a hipster and random job title based on trending tech!" />
 
     <title>Job title generator</title>
 
     <meta property="og:site_name" content="Job Title Generator" />
     <meta property="og:title" content="Job Title Generator" />
-    <meta property="og:description" content="Create yourself a new business card with a job title every hipster would be jealous of!" />
+    <meta property="og:description" content="Generate a hipster and random job title based on trending tech!" />
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Job Title Generator">
-    <meta name="twitter:description" content="Create yourself a new business card with a job title every hipster would be jealous of!">
+    <meta name="twitter:description" content="Generate a hipster and random job title based on trending tech!">
 
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
     
@@ -29,7 +29,7 @@
 <div id="header_wrap" class="outer">
     <header class="inner">
         <!-- <h1 id="project_title">Job Title Generator</h1> -->
-        <h4 id="project_tagline">Create yourself a new business card with a job title every hipster would be jealous of!</h4>
+        <h4 id="project_tagline">Generate a hipster and random job title based on trending tech!</h4>
     </header>
 </div>
 
@@ -38,8 +38,8 @@
         <div id="card_box_3d">
             <div class="card" title="Double click me to generate a new one..." itemscope itemtype="http://data-vocabulary.org/Person">
                 <div class="name fn" itemprop="name">
-                    <span class="first_name"></span>
-                    <span class="last_name"></span>
+                    <span class="other_name"></span>
+                    <span class="other_name"></span>
                     <br/>
                     <span class="company_name"></span>
                 </div>
@@ -50,17 +50,12 @@
 
         <div id="controls">
             <div class="customize_submit">
-                <button id="generate_button">Generate random job title…</button>
+                <button id="generate_button" class="btn">Generate</button>
+                
             </div>
             <div class="customize_name">
-                <label for="first_name">First name:</label><input type="text" name="first_name" id="first_name" value=""  />
-                <label for="last_name">Last name:</label><input type="text" name="last_name" id="last_name" value=""  />
-                <label for="company_name">Company:</label><input type="text" name="company_name" id="company_name" value="" />
-            </div>
-            <div class="customize_title">
-                <label for="title_first">1st</label><input type="range" name="title_first" id="title_first" min="0" value="0" max="50" />
-                <label for="title_second">2nd</label><input type="range" name="title_second" id="title_second" min="0" value="0" max="50" />
-                <label for="title_third">3rd</label><input type="range" name="title_third" id="title_third" min="0" value="0" max="50" />
+                <label for="first_name" class="other_name">First name:</label><input type="text" name="first_name" id="first_name" value="Joe"  />
+                <label for="last_name" class="other_name">Last name:</label><input type="text" name="last_name" id="last_name" value="Shmoe"  />
             </div>
         </div>
 
