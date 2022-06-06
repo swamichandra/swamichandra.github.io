@@ -41,10 +41,9 @@
                     <span class="other_name"></span>
                     <span class="other_name"></span>
                     <br/>
-                    <span class="company_name"></span>
                 </div>
                 <div id="title_generated" class="name" itemprop="title"></div>
-                <div class="location" itemprop="affiliation">ACME Corp</div>
+                <h3 class="location other_name">Dallas, TX</h3>
             </div>
         </div>
 
@@ -54,8 +53,8 @@
                 
             </div>
             <div class="customize_name">
-                <label for="first_name" class="other_name">First name:</label><input type="text" name="first_name" id="first_name" value="Joe"  />
-                <label for="last_name" class="other_name">Last name:</label><input type="text" name="last_name" id="last_name" value="Shmoe"  />
+                <label for="first_name" class="other_name">First name:</label><input type="text" name="first_name" id="first_name"  />
+                <label for="last_name" class="other_name">Last name:</label><input type="text" name="last_name" id="last_name"  />
             </div>
         </div>
 
@@ -592,11 +591,9 @@ var TitleGenerator = (function() {
 
     var first_name_input = document.getElementById('first_name');
     var last_name_input = document.getElementById('last_name');
-    var company_name_input = document.getElementById('company_name');
 
     var first_name = $('#card_box_3d .first_name');
     var last_name = $('#card_box_3d .last_name');
-    var company_name = $('#card_box_3d .company_name');
 
     var card = $('#card_box_3d .vcard');
 
@@ -641,14 +638,6 @@ var TitleGenerator = (function() {
         last_name.innerHTML = this.value;
     }, false);
 
-    company_name_input.addEventListener('change', function() {
-        company_name.innerHTML = this.value;
-    }, false);
-
-    company_name_input.addEventListener('keyup', function() {
-        company_name.innerHTML = this.value;
-    }, false);
-
     card.addEventListener('dblclick', function() {
         generate_random_jobtitle();
     }, false);
@@ -669,11 +658,9 @@ var TitleGenerator = (function() {
 
             first_name_input.value = get_query_param('firstname') || generate_first_name();
             last_name_input.value = get_query_param('lastname') || 'M. Doe';
-            company_name_input.value = get_query_param('company') || 'ACME Corp.';
 
             trigger_change_event(first_name_input);
             trigger_change_event(last_name_input);
-            trigger_change_event(company_name_input);
 
             if (document.location.hash && hash_pattern.test(document.location.hash)) {
                 generate_jobtitle(document.location.hash);
